@@ -1,4 +1,4 @@
-package com.raulroks.eventsourcing.model.event;
+package com.raulroks.eventsourcing.model.events;
 
 public class MoneyDebitedEvent extends BaseEvent<String> {
 

@@ -1,4 +1,4 @@
-package com.raulroks.eventsourcing.model.aggregator;
+package com.raulroks.eventsourcing.model.aggregates;
 
 import org.axonframework.modelling.command.AggregateIdentifier;
 import org.axonframework.spring.stereotype.Aggregate;

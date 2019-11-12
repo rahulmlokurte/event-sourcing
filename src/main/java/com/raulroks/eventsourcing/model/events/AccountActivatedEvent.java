@@ -1,6 +1,6 @@
-package com.raulroks.eventsourcing.model.event;
+package com.raulroks.eventsourcing.model.events;
 
-import com.raulroks.eventsourcing.model.aggregator.Status;
+import com.raulroks.eventsourcing.model.aggregates.Status;
 
 public class AccountActivatedEvent extends BaseEvent<String> {
 

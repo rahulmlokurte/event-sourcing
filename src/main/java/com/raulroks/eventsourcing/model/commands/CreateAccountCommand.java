@@ -1,4 +1,4 @@
-package com.raulroks.eventsourcing.model.command;
+package com.raulroks.eventsourcing.model.commands;
 
 public class CreateAccountCommand extends BaseCommand<String> {
 
