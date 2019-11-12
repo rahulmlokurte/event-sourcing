@@ -7,10 +7,13 @@ import com.raulroks.eventsourcing.model.commands.CreateAccountCommand;
 import com.raulroks.eventsourcing.model.commands.CreditMoneyCommand;
 import com.raulroks.eventsourcing.model.commands.DebitMoneyCommand;
 import org.axonframework.commandhandling.gateway.CommandGateway;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.util.UUID;
 import java.util.concurrent.CompletableFuture;
 
+@Service
 public class AccountCommandServiceImpl implements AccountCommandService {
 
     private final CommandGateway commandGateway;

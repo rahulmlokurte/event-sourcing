@@ -9,9 +9,9 @@ import com.raulroks.eventsourcing.model.events.AccountHeldEvent;
 import com.raulroks.eventsourcing.model.events.MoneyCreditedEvent;
 import com.raulroks.eventsourcing.model.events.MoneyDebitedEvent;
 import org.axonframework.commandhandling.CommandHandler;
+import org.axonframework.commandhandling.model.AggregateIdentifier;
+import org.axonframework.commandhandling.model.AggregateLifecycle;
 import org.axonframework.eventsourcing.EventSourcingHandler;
-import org.axonframework.modelling.command.AggregateIdentifier;
-import org.axonframework.modelling.command.AggregateLifecycle;
 import org.axonframework.spring.stereotype.Aggregate;
 
 @Aggregate
@@ -49,7 +49,7 @@ public class AccountAggregate {
     }
 
     @CommandHandler
-    protected void on(CreditMoneyCommand creditMoneyCommand){
+    protected AccountAggregate(CreditMoneyCommand creditMoneyCommand){
         AggregateLifecycle.apply(new MoneyCreditedEvent(creditMoneyCommand.id, creditMoneyCommand.creditAmount, creditMoneyCommand.currency));
     }
 
@@ -64,7 +64,7 @@ public class AccountAggregate {
     }
 
     @CommandHandler
-    protected void on(DebitMoneyCommand debitMoneyCommand){
+    protected  AccountAggregate(DebitMoneyCommand debitMoneyCommand){
         AggregateLifecycle.apply(new MoneyDebitedEvent(debitMoneyCommand.id, debitMoneyCommand.debitAmount, debitMoneyCommand.currency));
     }
 

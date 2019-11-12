@@ -4,6 +4,7 @@ import com.raulroks.eventsourcing.dto.AccountCreateDTO;
 import com.raulroks.eventsourcing.dto.MoneyCreditDTO;
 import com.raulroks.eventsourcing.dto.MoneyDebitDTO;
 import com.raulroks.eventsourcing.model.events.AccountCreatedEvent;
+import org.springframework.stereotype.Component;
 
 import java.util.concurrent.CompletableFuture;
 

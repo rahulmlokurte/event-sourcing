@@ -1,6 +1,6 @@
 package com.raulroks.eventsourcing.model.commands;
 
-import org.axonframework.modelling.command.TargetAggregateIdentifier;
+import org.axonframework.commandhandling.TargetAggregateIdentifier;
 
 public class BaseCommand<T> {
 
