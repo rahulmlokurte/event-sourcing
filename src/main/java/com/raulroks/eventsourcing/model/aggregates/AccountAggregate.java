@@ -49,7 +49,7 @@ public class AccountAggregate {
     }
 
     @CommandHandler
-    protected AccountAggregate(CreditMoneyCommand creditMoneyCommand){
+    protected void on(CreditMoneyCommand creditMoneyCommand){
         AggregateLifecycle.apply(new MoneyCreditedEvent(creditMoneyCommand.id, creditMoneyCommand.creditAmount, creditMoneyCommand.currency));
     }
 
@@ -64,7 +64,7 @@ public class AccountAggregate {
     }
 
     @CommandHandler
-    protected  AccountAggregate(DebitMoneyCommand debitMoneyCommand){
+    protected void on(DebitMoneyCommand debitMoneyCommand){
         AggregateLifecycle.apply(new MoneyDebitedEvent(debitMoneyCommand.id, debitMoneyCommand.debitAmount, debitMoneyCommand.currency));
     }
 
